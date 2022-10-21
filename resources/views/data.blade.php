@@ -144,6 +144,7 @@ li:active {
         <li><a href="resume">Resume</a></li>
         <li><a href="personaldata">Personal Data</a></li>
         <li><a href="contact">Contact us</a></li>
+        <li><a href="lihatkrs">KRS</a></li>
     </ul>   
     </nav>
     <div class="aboutme">

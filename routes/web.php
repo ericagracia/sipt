@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KRSController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cv', function () {
-    return view('cv');
-});
+// Route::get('/cv', function () {
+//     return view('cv');
+// });
+
+Route::get('/cv', [KRSController::class, 'index']);
 
 Route::get('/resume', function () {
     return view('resume');

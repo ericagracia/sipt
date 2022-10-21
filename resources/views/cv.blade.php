@@ -84,10 +84,20 @@ li:active {
 }
 img{
     clip-path: circle();
+    margin-top: 5rem;
 }
 .container-erica > div > h1 {
     text-align : center;
 }
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
 </style>
 <body>
     <nav>
@@ -96,6 +106,7 @@ img{
         <li><a href="resume">Resume</a></li>
         <li><a href="personaldata">Personal Data</a></li>
         <li><a href="contact">Contact us</a></li>
+        <li><a href="lihatkrs">KRS</a></li>
     </ul>   
     </nav>
     <div class="container-erica">
@@ -103,8 +114,27 @@ img{
             <img src="foto.jpg" alt="" height="350px" width="220px">
         </div>
         <div>
-            <h1>Erica Gracia<h1>
-            <h2>Upcoming Digital Marketing</h2>
+            <h1>Nama : {{ $nama }} <h1>
+            <h1>Student ID : {{ $StudentID }} </h1>
+            <h1>Term : {{ $kode_term }} </h1>
+            <br/>
+            <table border="1">
+                <tr>
+                    <th>No</th>
+                    <th>Kode Matakuliah</th>
+                    <th>Nama Matakuliah</th>
+                    <th>SKS</th>
+
+                </tr>
+            @foreach ($matakuliah as $mk)
+            <tr>
+                <td> {{$mk -> id_matakuliah}} </td>
+                <td> {{$mk -> kode_matakuliah}} </td>
+                <td> {{$mk -> nama_matakuliah}} </td>
+                <td> {{$mk -> sks}} </td>
+            </tr>
+            @endforeach
+            </table>
         </div>
     </div>
 
