@@ -115,7 +115,7 @@ td, th {
         </div>
         <div>
             <h1>Nama : {{ $nama }} <h1>
-            <h1>Student ID : {{ $StudentID }} </h1>
+            <h1>Student IDz : {{ $StudentID }} </h1>
             <h1>Term : {{ $kode_term }} </h1>
             <br/>
             <table border="1">
