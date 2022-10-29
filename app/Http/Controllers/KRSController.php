@@ -13,8 +13,8 @@ class KRSController extends Controller
         $StudentID = DB::table('mahasiswa')->where("StudentID", "308120001")->value("StudentID");
         $kode_term = DB::table('term')->where("kode_term", "1212")->value("kode_term");
         $matakuliah = DB::table('matakuliah')->get();
+        $khs_detail = DB::table('khs_detail')->get();
 
-
-        return view('cv', ['nama' => $nama, 'StudentID' => $StudentID, 'kode_term' => $kode_term, 'matakuliah' => $matakuliah]);
+        return view('lihatkhs', ['nama' => $nama, 'StudentID' => $StudentID, 'kode_term' => $kode_term, 'matakuliah' => $matakuliah, 'khs_detail' => $khs_detail]);
     }
 }

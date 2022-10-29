@@ -22,7 +22,7 @@ Route::get('/', function () {
 //     return view('cv');
 // });
 
-Route::get('/cv', [KRSController::class, 'index']);
+Route::get('/lihatkhs', [KRSController::class, 'index']);
 
 Route::get('/resume', function () {
     return view('resume');
@@ -34,4 +34,8 @@ Route::get('/contact', function () {
 
 Route::get('/data', function () {
     return view('data');
+});
+
+Route::get('/admin', function () { 
+    return view('admin'); 
 });

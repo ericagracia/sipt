@@ -117,6 +117,7 @@ td, th {
             <h1>Nama : {{ $nama }} <h1>
             <h1>Student IDz : {{ $StudentID }} </h1>
             <h1>Term : {{ $kode_term }} </h1>
+            <h1>Nilai: {{ $nilaihuruf -> nilaiHuruf }} </h1>
             <br/>
             <table border="1">
                 <tr>
@@ -132,8 +133,10 @@ td, th {
                 <td> {{$mk -> kode_matakuliah}} </td>
                 <td> {{$mk -> nama_matakuliah}} </td>
                 <td> {{$mk -> sks}} </td>
+            
             </tr>
             @endforeach
+            {{-- <td> {{$nilaihuruf -> nilaiHuruf}} </td> --}}
             </table>
         </div>
     </div>
